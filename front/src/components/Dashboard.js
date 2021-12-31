@@ -7,10 +7,10 @@ import Result from './Result';
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <Filter></Filter>
+      <Filter />
       <div className="content">
-        <Search></Search>
-        <Result></Result>
+        <Search />
+        <Result />
       </div>
     </div>
   );

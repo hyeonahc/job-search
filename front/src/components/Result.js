@@ -1,13 +1,15 @@
 import React from 'react';
 import './Result.scss';
-import saramin from '../saramin.json';
+// import Saramin from '../saramin.json';
+import Table from './Table';
 
 const Result = () => {
   return (
     <div className="result">
-      {saramin.map((val, key) => {
+      {/* {Saramin.map((val, key) => {
         return <div>{val.title}</div>;
-      })}
+      })} */}
+      <Table />
     </div>
   );
 };
