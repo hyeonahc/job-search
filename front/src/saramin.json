@@ -1,0 +1,37 @@
+[
+  {
+    "title": "title1",
+    "companyName": "company name1",
+    "foundingDate": "founding date1",
+    "revenue": "revenue1",
+    "workforce": "workforce1"
+  },
+  {
+    "title": "title2",
+    "companyName": "company name2",
+    "foundingDate": "founding date2",
+    "revenue": "revenue2",
+    "workforce": "workforce2"
+  },
+  {
+    "title": "title3",
+    "companyName": "company name3",
+    "foundingDate": "founding date3",
+    "revenue": "revenue3",
+    "workforce": "workforce3"
+  },
+  {
+    "title": "title4",
+    "companyName": "company name4",
+    "foundingDate": "founding date4",
+    "revenue": "revenue4",
+    "workforce": "workforce4"
+  },
+  {
+    "title": "title5",
+    "companyName": "company name5",
+    "foundingDate": "founding date5",
+    "revenue": "revenue5",
+    "workforce": "workforce5"
+  }
+]
