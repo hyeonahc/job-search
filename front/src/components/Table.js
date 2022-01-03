@@ -8,15 +8,6 @@ const Table = () => {
   const columns = useMemo(() => Columns, []);
   const data = useMemo(() => Saramin, []);
 
-  // const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-  //   useTable(
-  //     {
-  //       columns: columns,
-  //       data: data,
-  //     },
-  //     usePagination
-  //   );
-
   const tableInstance = useTable(
     {
       columns: columns,
@@ -64,7 +55,6 @@ const Table = () => {
           })}
         </tbody>
       </table>
-
       <div>
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           Previous
