@@ -11,7 +11,6 @@ const Filter = () => {
       </h1>
       <h2>Filter</h2>
       <SelectFilter></SelectFilter>
-      <button>필터 적용하기</button>
     </div>
   );
 };

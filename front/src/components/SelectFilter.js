@@ -1,85 +1,92 @@
 import React, { useState } from 'react';
 import './SelectFilter.scss';
-import RadioButton from './RadioButton';
+import produce from 'immer';
+import axios from 'axios';
+
+const foundingDates = [
+  {
+    id: 'founding-date-new',
+    name: 'foundingDate',
+    label: '신생',
+  },
+  {
+    id: 'founding-date-5years',
+    name: 'foundingDate',
+    label: '5년 이상',
+  },
+  {
+    id: 'founding-date-10years',
+    name: 'foundingDate',
+    label: '10년 이상',
+  },
+  {
+    id: 'founding-date-20years',
+    name: 'foundingDate',
+    label: '20년 이상',
+  },
+];
+
+const revenues = [
+  {
+    id: 'revenue-none',
+    name: 'revenue',
+    label: '무관',
+    checked: false,
+  },
+  {
+    id: 'revenue-0',
+    name: 'revenue',
+    label: '0 - 10억 사이',
+    checked: false,
+  },
+  {
+    id: 'revenue-1b',
+    name: 'revenue',
+    label: '10억 이상',
+    checked: false,
+  },
+  {
+    id: 'revenue-5b',
+    name: 'revenue',
+    label: '50억 이상',
+    checked: false,
+  },
+  {
+    id: 'revenue-10b',
+    name: 'revenue',
+    label: '100억 이상',
+    checked: false,
+  },
+  {
+    id: 'revenue-50b',
+    name: 'revenue',
+    label: '500억 이상',
+    checked: false,
+  },
+];
 
 const SelectFilter = () => {
-  const onChange = event => {
-    const test = event.target.id;
+  // 백엔드에서 key이름이 같아야한다 foundingDate, revenue
+  const [form, setForm] = useState({
+    foundingDate: '',
+    revenue: '',
+  });
 
-    setFoundingDates(
-      foundingDates.map(foundingDate =>
-        foundingDate.id === test
-          ? { ...foundingDate, checked: !foundingDate.checked }
-          : foundingDate
-      )
+  const onChange = event => {
+    console.log(event.target.value);
+    setForm(
+      produce(form, draft => {
+        draft[event.target.name] = event.target.value;
+      })
     );
   };
 
-  const [foundingDates, setFoundingDates] = useState([
-    {
-      id: 'founding-date-new',
-      name: 'founding-date',
-      label: '신생',
-      checked: false,
-    },
-    {
-      id: 'founding-date-5years',
-      name: 'founding-date',
-      label: '5년 이상',
-      checked: false,
-    },
-    {
-      id: 'founding-date-10years',
-      name: 'founding-date',
-      label: '10년 이상',
-      checked: false,
-    },
-    {
-      id: 'founding-date-20years',
-      name: 'founding-date',
-      label: '20년 이상',
-      checked: false,
-    },
-  ]);
-
-  // const revenues = [
-  //   {
-  //     id: 'revenue-none',
-  //     name: 'revenue',
-  //     label: '무관',
-  //     checked: false,
-  //   },
-  //   {
-  //     id: 'revenue-0',
-  //     name: 'revenue',
-  //     label: '0 - 10억 사이',
-  //     checked: false,
-  //   },
-  //   {
-  //     id: 'revenue-1b',
-  //     name: 'revenue',
-  //     label: '10억 이상',
-  //     checked: false,
-  //   },
-  //   {
-  //     id: 'revenue-5b',
-  //     name: 'revenue',
-  //     label: '50억 이상',
-  //     checked: false,
-  //   },
-  //   {
-  //     id: 'revenue-10b',
-  //     name: 'revenue',
-  //     label: '100억 이상',
-  //     checked: false,
-  //   },
-  //   {
-  //     id: 'revenue-50b',
-  //     name: 'revenue',
-  //     label: '500억 이상',
-  //     checked: false,
-  //   },
-  // ];
+  // const filterUrl = '주소'
+  // const onSubmit = () => {
+  //   axios.post(filterUrl, form).then(res=> {
+  //     console.log(res.data)
+  //   })
+  // };
 
   // const workforces = [
   //   {
@@ -112,28 +119,39 @@ const SelectFilter = () => {
     <div className="select-filter">
       <div>
         <h3>설립일</h3>
-        {foundingDates.map(foundingDate => (
-          <RadioButton
-            type="radio"
-            foundingDate={foundingDate}
-            onChange={onChange}
-          />
-        ))}
-      </div>
-
-      {/* <div>
-        <h3>매출액</h3>
-        {revenues.map(revenue => (
-          <RadioButton type="radio" revenue={revenue} onChange={onChange} />
-        ))}
+        <div onChange={onChange}>
+          {foundingDates.map(foundingDate => (
+            <>
+              <input
+                type="radio"
+                id={foundingDate.id}
+                value={foundingDate.id}
+                name={foundingDate.name}
+              />
+              <label htmlFor={foundingDate.id}>{foundingDate.label}</label>
+            </>
+          ))}
+        </div>
       </div>
 
       <div>
-        <h3>회사사원수</h3>
-        {workforces.map(workforce => (
-          <RadioButton type="radio" revenue={workforce} onChange={onChange} />
-        ))}
-      </div> */}
+        <h3>매출액</h3>
+        <div onChange={onChange}>
+          {revenues.map(revenue => (
+            <>
+              <input
+                type="radio"
+                id={revenue.id}
+                value={revenue.id}
+                name={revenue.name}
+              />
+              <label htmlFor={revenue.id}>{revenue.label}</label>
+            </>
+          ))}
+        </div>
+      </div>
+
+      {/* <button onClick={onSubmit}>필터 적용하기</button> */}
     </div>
   );
 };
