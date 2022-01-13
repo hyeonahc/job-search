@@ -3,6 +3,7 @@ import './SelectFilter.scss';
 import produce from 'immer';
 import axios from 'axios';
 
+// foundingDates의 갑은 고정값이므로 컴포넌트 밖으로 빼주었다 (값이 변하지 않으니 안에 있을 필요가 없고 안에 있으면 스테이트 값이 바꼈을때 읽는 코드만 늘어남)
 const foundingDates = [
   {
     id: 'founding-date-new',
@@ -81,6 +82,7 @@ const SelectFilter = () => {
     );
   };
 
+  // 필터링 다 선택하고 버튼 눌렀을때
   // const filterUrl = '주소'
   // const onSubmit = () => {
   //   axios.post(filterUrl, form).then(res=> {

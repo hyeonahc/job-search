@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import './Table.scss';
 import { useTable, usePagination } from 'react-table';
-import Saramin from '../saramin.json';
+// import Saramin from '../saramin.json';
 import { Columns } from './Columns';
 import axios from 'axios';
 
