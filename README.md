@@ -1,3 +1,3 @@
 <h1>사람인 검색 어플리케이션 프론트엔드</h1>
 
-<h2><a href="https://github.com/rerun1129/job_search_back">백엔드 페이지 주소</h2>
+<h2><a href="https://github.com/rerun1129/job_search_back">백엔드 페이지</h2>
