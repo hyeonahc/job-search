@@ -109,11 +109,11 @@ const Filter = () => {
   };
 
   // 필터링 보내줄 백엔드 주소 필요
-  // const filterUrl = '주소'
+  // const filterUrl = '주소';
   // const onSubmit = () => {
-  //   axios.post(filterUrl, form).then(res=> {
-  //     console.log(res.data)
-  //   })
+  //   axios.get(filterUrl, form).then(response => {
+  //     console.log(response.data);
+  //   });
   // };
 
   return (
