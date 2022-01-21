@@ -1,4 +1,5 @@
 import './Dashboard.scss';
+import saramin from '../data/saramin.json';
 import React, { useState, useMemo, useEffect } from 'react';
 import { useTable, usePagination } from 'react-table';
 import axios from 'axios';
@@ -29,17 +30,22 @@ const Columns = [
 const Dashboard = () => {
   const [jobs, setJobs] = useState([]);
 
+  // console.log(saramin);
+
+  // 테이블에 초기 데이터를 가져올 백엔드 주소: localhost:8080
   const filterUrl =
+    // saramin;
+    // 가짜 JSON: news api
     'https://newsapi.org/v2/top-headlines?country=kr&apiKey=493d2c43063547bb8cd4e80316432f85';
   useEffect(() => {
     axios.get(filterUrl).then(response => {
-      console.log(response.data.articles);
+      // console.log(response);
       setJobs(response.data.articles);
     });
   }, []);
+  // !! useEffect 함수의 두번째 파라미터 배열에 어떤 값을 넣어주어야할지 공부
 
   const columns = useMemo(() => Columns, []);
-  // const data = useMemo(() => Saramin, []);
 
   const tableInstance = useTable(
     {

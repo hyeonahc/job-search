@@ -108,7 +108,7 @@ const Filter = () => {
     );
   };
 
-  // 필터링 보내줄 백엔드 주소 필요
+  // 필터링 보내줄 백엔드 주소: localhost:8080/search
   // const filterUrl = '주소';
   // const onSubmit = () => {
   //   axios.get(filterUrl, form).then(response => {
@@ -126,7 +126,7 @@ const Filter = () => {
         <h3>설립일</h3>
         <div onChange={onChange}>
           {foundingDates.map(foundingDate => (
-            <>
+            <div key={foundingDate.id}>
               <input
                 type="radio"
                 id={foundingDate.id}
@@ -134,7 +134,7 @@ const Filter = () => {
                 name={foundingDate.name}
               />
               <label htmlFor={foundingDate.id}>{foundingDate.label}</label>
-            </>
+            </div>
           ))}
         </div>
       </div>
@@ -143,7 +143,7 @@ const Filter = () => {
         <h3>매출액</h3>
         <div onChange={onChange}>
           {revenues.map(revenue => (
-            <>
+            <div key={revenue.id}>
               <input
                 type="radio"
                 id={revenue.id}
@@ -151,7 +151,7 @@ const Filter = () => {
                 name={revenue.name}
               />
               <label htmlFor={revenue.id}>{revenue.label}</label>
-            </>
+            </div>
           ))}
         </div>
       </div>
@@ -160,7 +160,7 @@ const Filter = () => {
         <h3>회사사원수</h3>
         <div onChange={onChange}>
           {employees.map(employee => (
-            <>
+            <div key={employee.id}>
               <input
                 type="radio"
                 id={employee.id}
@@ -168,7 +168,7 @@ const Filter = () => {
                 name={employee.name}
               />
               <label htmlFor={employee.id}>{employee.label}</label>
-            </>
+            </div>
           ))}
         </div>
       </div>
