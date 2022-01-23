@@ -1,47 +1,28 @@
 import { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
-import MOCK_DATA from '../data/MOCK_DATA.json';
 
-const Mock_API = MOCK_DATA;
+const Mock_API = '/MOCK_DATA.json';
+// const Mock_API = process.env.REACT_APP_SERVER_HOST;
+// console.log(process.env);
 
 const JobPostContext = createContext({
   sate: {
-    // title: 'title-1',
-    // companyName: 'company-name-1',
-    // foundingDate: 'founding-date-1',
-    // revenue: 'revenue-1',
-    // employee: 'employee-1',
-    posts: [
-      { companyName: 'company-name-1' },
-      { title: 'title-1' },
-      { foundingDate: 'founding-date-1' },
-      { revenue: 'revenue-1' },
-      { employee: 'employee-1' },
-    ],
+    posts: [],
   },
   actions: {
-    // setTitle: () => {},
-    // setCompanyName: () => {},
-    // setFoundingDate: () => {},
-    // setRevenue: () => {},
-    // setEmployee: () => {},
     setPosts: () => {},
   },
 });
 
 const JobPostProvider = ({ children }) => {
-  // const [title, setTitle] = useState('');
-  // const [companyName, setCompanyName] = useState('');
-  // const [foundingDate, setFoundingDate] = useState('');
-  // const [revenue, setRevenue] = useState('');
-  // const [employee, setEmployee] = useState('');
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get(Mock_API);
-        setPosts(res.data.posts);
+        // console.log(res.data.contents);
+        setPosts(res.data.contents);
       } catch (e) {
         console.error(e);
       }
@@ -55,9 +36,7 @@ const JobPostProvider = ({ children }) => {
   };
 
   return (
-    <JobPostProvider.Provider value={value}>
-      {children}
-    </JobPostProvider.Provider>
+    <JobPostContext.Provider value={value}>{children}</JobPostContext.Provider>
   );
 };
 

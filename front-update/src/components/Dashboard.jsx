@@ -1,5 +1,4 @@
 import './Dashboard.scss';
-import saramin from '../data/saramin.json';
 import React, { useState, useMemo, useEffect } from 'react';
 import { useTable, usePagination } from 'react-table';
 import axios from 'axios';
