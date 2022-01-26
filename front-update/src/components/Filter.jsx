@@ -2,7 +2,7 @@ import './Filter.scss';
 import React, { useState } from 'react';
 import logo from '../img/logo.png';
 import produce from 'immer';
-// import axios from 'axios';
+import axios from 'axios';
 
 const foundingDates = [
   {
@@ -109,12 +109,12 @@ const Filter = () => {
   };
 
   // 필터링 보내줄 백엔드 주소: localhost:8080/search
-  // const filterUrl = '주소';
-  // const onSubmit = () => {
-  //   axios.get(filterUrl, form).then(response => {
-  //     console.log(response.data);
-  //   });
-  // };
+  const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
+  const onClick = () => {
+    axios.get(filterUrl, form).then(response => {
+      console.log(response.data);
+    });
+  };
 
   return (
     <div className="filter">
@@ -174,7 +174,7 @@ const Filter = () => {
       </div>
 
       {/* 백앤드 주소 생기면 onClick={onSubmit} 넣기 */}
-      <button>필터 적용하기</button>
+      <button onClick={onClick}>필터 적용하기</button>
     </div>
   );
 };
