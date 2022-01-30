@@ -109,10 +109,12 @@ const Filter = () => {
   };
 
   // 필터링 보내줄 백엔드 주소: localhost:8080/search
-  const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
+  // const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
+  const filterUrl = '';
   const onClick = () => {
     axios.get(filterUrl, form).then(response => {
       console.log(response.data);
+      // setForm
     });
   };
 

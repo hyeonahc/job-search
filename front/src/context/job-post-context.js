@@ -1,8 +1,8 @@
 import { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
-// const Mock_API = '/MOCK_DATA.json';
-const Mock_API = process.env.REACT_APP_SERVER_HOST;
+const Mock_API = '/MOCK_DATA.json';
+// const Mock_API = process.env.REACT_APP_SERVER_HOST;
 // console.log(process.env);
 
 const JobPostContext = createContext({
