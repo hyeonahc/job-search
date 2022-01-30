@@ -6,27 +6,27 @@ import axios from 'axios';
 
 const foundingDates = [
   {
-    id: 'founding-date-none',
+    id: -1,
     name: 'foundingDate',
     label: '무관',
   },
   {
-    id: 'founding-date-new',
+    id: 0,
     name: 'foundingDate',
     label: '신생',
   },
   {
-    id: 'founding-date-5years',
+    id: 5,
     name: 'foundingDate',
     label: '5년 이상',
   },
   {
-    id: 'founding-date-10years',
+    id: 10,
     name: 'foundingDate',
     label: '10년 이상',
   },
   {
-    id: 'founding-date-20years',
+    id: 20,
     name: 'foundingDate',
     label: '20년 이상',
   },
@@ -34,32 +34,32 @@ const foundingDates = [
 
 const revenues = [
   {
-    id: 'revenue-none',
+    id: -1,
     name: 'revenue',
     label: '무관',
   },
   {
-    id: 'revenue-0',
+    id: 'between-0-to-10',
     name: 'revenue',
     label: '0 - 10억 사이',
   },
   {
-    id: 'revenue-1b',
+    id: 10,
     name: 'revenue',
     label: '10억 이상',
   },
   {
-    id: 'revenue-5b',
+    id: 50,
     name: 'revenue',
     label: '50억 이상',
   },
   {
-    id: 'revenue-10b',
+    id: 100,
     name: 'revenue',
     label: '100억 이상',
   },
   {
-    id: 'revenue-50b',
+    id: 500,
     name: 'revenue',
     label: '500억 이상',
   },
@@ -67,27 +67,27 @@ const revenues = [
 
 const employees = [
   {
-    id: 'employee-none',
+    id: 1,
     name: 'employee',
     label: '무관',
   },
   {
-    id: 'employee-10',
+    id: 'loe',
     name: 'employee',
     label: '10인 미만',
   },
   {
-    id: 'employee-49',
+    id: 49,
     name: 'employee',
     label: '10 - 49인',
   },
   {
-    id: 'employee-499',
+    id: 499,
     name: 'employee',
     label: '50 - 499인',
   },
   {
-    id: 'employee-500',
+    id: 500,
     name: 'employee',
     label: '500인 이상',
   },
@@ -97,6 +97,7 @@ const Filter = () => {
   const [form, setForm] = useState({
     foundingDate: '',
     revenue: '',
+    employees: '',
   });
 
   const onChange = event => {
