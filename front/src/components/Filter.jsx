@@ -11,9 +11,9 @@ const foundingDates = [
     label: '무관',
   },
   {
-    id: 0,
+    id: 'between',
     name: 'foundingDate',
-    label: '신생',
+    label: '5년 미만',
   },
   {
     id: 5,
@@ -39,9 +39,9 @@ const revenues = [
     label: '무관',
   },
   {
-    id: 'between-0-to-10',
+    id: 'between',
     name: 'revenue',
-    label: '0 - 10억 사이',
+    label: '10억 미만',
   },
   {
     id: 10,
@@ -72,7 +72,7 @@ const employees = [
     label: '무관',
   },
   {
-    id: 'loe',
+    id: 'between',
     name: 'employee',
     label: '10인 미만',
   },
@@ -97,16 +97,17 @@ const Filter = () => {
   const [form, setForm] = useState({
     foundingDate: '',
     revenue: '',
-    employees: '',
+    employee: '',
   });
 
   const onChange = event => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setForm(
       produce(form, draft => {
         draft[event.target.name] = event.target.value;
       })
     );
+    console.log(form);
   };
 
   // 필터링 보내줄 백엔드 주소: localhost:8080/search
