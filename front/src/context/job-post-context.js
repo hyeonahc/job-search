@@ -2,8 +2,8 @@ import { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
 // const saraminData = '/MOCK_DATA.json';
-const saraminData = '/saramin.json';
-// const saraminData = process.env.REACT_APP_SERVER_HOST;
+// const saraminData = '/saramin.json';
+const saraminData = process.env.REACT_APP_SERVER_HOST;
 // console.log(process.env);
 
 const JobPostContext = createContext({

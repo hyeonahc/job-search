@@ -73,7 +73,7 @@ const DashboardContext = () => {
                 return (
                   <tr {...row.getRowProps()}>
                     {row.cells.map((cell, cellIndex) => {
-                      // console.log(cell, cellIndex);
+                      console.log(cell, cellIndex);
                       // if (cellIndex === 3 && cell.value !== undefined) {
                       //   console.log(cell.value / 100000000 + '억');
                       //   // cell.values.revenue = '';
@@ -87,6 +87,16 @@ const DashboardContext = () => {
                           {cellIndex === 3 && cell.value !== undefined
                             ? (cell.value = cell.value / 100000000 + '억')
                             : (cell.value = undefined)}
+
+                          {/* {(cell.row.values.revenue = '')} */}
+
+                          {/* {cellIndex === 3
+                            ? ((cell.row.original.revenue =
+                                'cell.row.original.revenue '),
+                              (cell.row.values.revenue =
+                                'cell.row.values.revenue '),
+                              (cell.value = 'cell.value '))
+                            : console.log(false)} */}
 
                           {cellIndex ? (
                             cell.render('Cell')
