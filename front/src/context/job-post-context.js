@@ -1,8 +1,8 @@
 import { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
-const saraminData = '/MOCK_DATA.json';
-// const saraminData = '/search_human.json';
+// const saraminData = '/MOCK_DATA.json';
+const saraminData = '/saramin.json';
 // const saraminData = process.env.REACT_APP_SERVER_HOST;
 // console.log(process.env);
 
@@ -19,16 +19,6 @@ const JobPostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // const fetchData = async () => {
-    //   try {
-    //     const res = await axios.get(saraminData);
-    //     // console.log(res.data.content);
-    //     setPosts(res.data.content);
-    //   } catch (e) {
-    //     console.error(e);
-    //   }
-    // };
-    // fetchData(saraminData);
     axios
       .get(saraminData)
       .then(({ data: { content } }) => {

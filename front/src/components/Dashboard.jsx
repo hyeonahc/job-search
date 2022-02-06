@@ -1,12 +1,10 @@
 import './Dashboard.scss';
-import React, { useState, useMemo, useEffect, useContext } from 'react';
+import React, { useMemo, useContext } from 'react';
 import { useTable, usePagination } from 'react-table';
-import axios from 'axios';
 import JobPostContext from '../context/job-post-context';
 
 const DashboardContext = () => {
   const { state } = useContext(JobPostContext);
-  // console.log(state);
 
   const Columns = [
     {
@@ -75,10 +73,20 @@ const DashboardContext = () => {
                 return (
                   <tr {...row.getRowProps()}>
                     {row.cells.map((cell, cellIndex) => {
+                      // console.log(cell, cellIndex);
+                      // if (cellIndex === 3 && cell.value !== undefined) {
+                      //   console.log(cell.value / 100000000 + '억');
+                      //   // cell.values.revenue = '';
+                      // }
                       return (
                         <td {...cell.getCellProps()}>
-                          {console.log('rowIndex', rowIndex)}
-                          {console.log('cellIndex', cellIndex)}
+                          {/* {cellIndex === 3 && cell.value !== undefined
+                            ? (cell.value = cell.value / 100000000 + '억')
+                            : (cell.value = undefined)} */}
+
+                          {cellIndex === 3 && cell.value !== undefined
+                            ? (cell.value = cell.value / 100000000 + '억')
+                            : (cell.value = undefined)}
 
                           {cellIndex ? (
                             cell.render('Cell')

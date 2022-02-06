@@ -6,27 +6,32 @@ import axios from 'axios';
 
 const foundingDates = [
   {
-    id: -1,
+    id: 'foundingDate-irrelevant',
+    value: -1,
     name: 'foundingDate',
     label: '무관',
   },
   {
-    id: 'between',
+    id: 'foundingDate-less-than-5years',
+    value: 'between',
     name: 'foundingDate',
     label: '5년 미만',
   },
   {
-    id: 5,
+    id: 'foundingDate-more-than-5years',
+    value: 5,
     name: 'foundingDate',
     label: '5년 이상',
   },
   {
-    id: 10,
+    id: 'foundingDate-more-than-10years',
+    value: 10,
     name: 'foundingDate',
     label: '10년 이상',
   },
   {
-    id: 20,
+    id: 'foundingDate-more-than-20years',
+    value: 20,
     name: 'foundingDate',
     label: '20년 이상',
   },
@@ -34,32 +39,38 @@ const foundingDates = [
 
 const revenues = [
   {
-    id: -1,
+    id: 'revenue-irrelevant',
+    value: -1,
     name: 'revenue',
     label: '무관',
   },
   {
-    id: 'between',
+    id: 'revenue-less-than-10billion',
+    value: 'between',
     name: 'revenue',
     label: '10억 미만',
   },
   {
-    id: 10,
+    id: 'revenue-more-than-10billion',
+    value: 10,
     name: 'revenue',
     label: '10억 이상',
   },
   {
-    id: 50,
+    id: 'revenue-more-than-50billion',
+    value: 50,
     name: 'revenue',
     label: '50억 이상',
   },
   {
-    id: 100,
+    id: 'revenue-more-than-100billion',
+    value: 100,
     name: 'revenue',
     label: '100억 이상',
   },
   {
-    id: 500,
+    id: 'revenue-more-than-500billion',
+    value: 500,
     name: 'revenue',
     label: '500억 이상',
   },
@@ -67,27 +78,32 @@ const revenues = [
 
 const employees = [
   {
-    id: 1,
+    id: 'employee-irrelevant',
+    value: -1,
     name: 'employee',
     label: '무관',
   },
   {
-    id: 'between',
+    id: 'employee-less-than-10',
+    value: 'between',
     name: 'employee',
     label: '10인 미만',
   },
   {
-    id: 49,
+    id: 'employee-between-10-to-49',
+    value: 49,
     name: 'employee',
     label: '10 - 49인',
   },
   {
-    id: 499,
+    id: 'employee-between-50-to-499',
+    value: 499,
     name: 'employee',
     label: '50 - 499인',
   },
   {
-    id: 500,
+    id: 'employee-more-than-500',
+    value: 500,
     name: 'employee',
     label: '500인 이상',
   },
@@ -107,18 +123,34 @@ const Filter = () => {
         draft[event.target.name] = event.target.value;
       })
     );
-    console.log(form);
   };
 
-  // 필터링 보내줄 백엔드 주소: localhost:8080/search
+  console.log(form);
+
   // const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
   const filterUrl = '';
   const onClick = () => {
     axios.get(filterUrl, form).then(response => {
       console.log(response.data);
-      // setForm
+      // setPosts(response.data.content);
+      setForm({
+        foundingDate: '',
+        revenue: '',
+        employee: '',
+      });
     });
   };
+
+  // useEffect(() => {
+  //   axios
+  //     .get(saraminData)
+  //     .then(({ data: { content } }) => {
+  //       setPosts(content);
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   return (
     <div className="filter">
@@ -134,7 +166,7 @@ const Filter = () => {
               <input
                 type="radio"
                 id={foundingDate.id}
-                value={foundingDate.id}
+                value={foundingDate.value}
                 name={foundingDate.name}
               />
               <label htmlFor={foundingDate.id}>{foundingDate.label}</label>
@@ -151,7 +183,7 @@ const Filter = () => {
               <input
                 type="radio"
                 id={revenue.id}
-                value={revenue.id}
+                value={revenue.value}
                 name={revenue.name}
               />
               <label htmlFor={revenue.id}>{revenue.label}</label>
@@ -168,7 +200,7 @@ const Filter = () => {
               <input
                 type="radio"
                 id={employee.id}
-                value={employee.id}
+                value={employee.value}
                 name={employee.name}
               />
               <label htmlFor={employee.id}>{employee.label}</label>
@@ -177,7 +209,6 @@ const Filter = () => {
         </div>
       </div>
 
-      {/* 백앤드 주소 생기면 onClick={onSubmit} 넣기 */}
       <button onClick={onClick}>필터 적용하기</button>
     </div>
   );
