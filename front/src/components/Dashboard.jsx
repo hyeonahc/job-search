@@ -21,7 +21,13 @@ const DashboardContext = () => {
     },
     {
       Header: '매출액',
-      accessor: 'revenue',
+      // accessor: 'revenue',
+      accessor: r => {
+        console.log(r.revenue);
+        if (r.revenue) {
+          return r.revenue / 100000000 + '억';
+        }
+      },
     },
     {
       Header: '회사사원수',
@@ -73,7 +79,7 @@ const DashboardContext = () => {
                 return (
                   <tr {...row.getRowProps()}>
                     {row.cells.map((cell, cellIndex) => {
-                      console.log(cell, cellIndex);
+                      // console.log(cell, cellIndex);
                       // if (cellIndex === 3 && cell.value !== undefined) {
                       //   console.log(cell.value / 100000000 + '억');
                       //   // cell.values.revenue = '';
@@ -84,23 +90,7 @@ const DashboardContext = () => {
                             ? (cell.value = cell.value / 100000000 + '억')
                             : (cell.value = undefined)} */}
 
-                          {cellIndex === 3 && cell.value !== undefined
-                            ? (cell.value = cell.value / 100000000 + '억')
-                            : (cell.value = undefined)}
-
-                          {/* {(cell.row.values.revenue = '')} */}
-
-                          {/* {cellIndex === 3
-                            ? ((cell.row.original.revenue =
-                                'cell.row.original.revenue '),
-                              (cell.row.values.revenue =
-                                'cell.row.values.revenue '),
-                              (cell.value = 'cell.value '))
-                            : console.log(false)} */}
-
-                          {cellIndex ? (
-                            cell.render('Cell')
-                          ) : (
+                          {cellIndex === 0 ? (
                             <a
                               href={state.posts[rowIndex].url}
                               target="_blank"
@@ -108,7 +98,13 @@ const DashboardContext = () => {
                             >
                               {cell.render('Cell')}
                             </a>
+                          ) : (
+                            cell.render('Cell')
                           )}
+
+                          {/* {cellIndex === 3 && cell.value !== undefined
+                            ? (cell.value = cell.value / 100000000 + '억')
+                            : (cell.value = undefined)} */}
                         </td>
                       );
                     })}

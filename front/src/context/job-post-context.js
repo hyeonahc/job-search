@@ -1,28 +1,41 @@
 import { useState, createContext, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../index';
 
 // const saraminData = '/MOCK_DATA.json';
 // const saraminData = '/saramin.json';
-const saraminData = process.env.REACT_APP_SERVER_HOST;
-// console.log(process.env);
+const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
+// const saraminDataPort = process.env.REACT_APP_SERVER_PORT;
+console.log(process.env);
+console.log(saraminDataURL);
 
 const JobPostContext = createContext({
-  sate: {
+  state: {
     posts: [],
   },
   actions: {
     setPosts: () => {},
+    onSearch: () => {},
   },
 });
 
 const JobPostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
+
+  const onSearch = form => {
+    axios.get(saraminDataURL, { data: form }).then(response => {
+      console.log('Clicked', response.data.content);
+      // setPost를 할건데 그 전에 saraminDataURL 거기에 filtering 할 정보를 같이 request를 보낸다
+      setPosts(response.data.content);
+    });
+  };
 
   useEffect(() => {
     axios
-      .get(saraminData)
+      .get(saraminDataURL)
       .then(({ data: { content } }) => {
         setPosts(content);
+        console.log(content);
       })
       .catch(error => {
         console.log(error);
@@ -31,7 +44,7 @@ const JobPostProvider = ({ children }) => {
 
   const value = {
     state: { posts },
-    actions: { setPosts },
+    actions: { setPosts, onSearch },
   };
 
   return (

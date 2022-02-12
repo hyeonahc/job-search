@@ -1,8 +1,9 @@
 import './Filter.scss';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from '../img/logo.png';
 import produce from 'immer';
 import axios from 'axios';
+import JobPostContext from '../context/job-post-context';
 
 const foundingDates = [
   {
@@ -110,6 +111,8 @@ const employees = [
 ];
 
 const Filter = () => {
+  const { state, actions } = useContext(JobPostContext);
+
   const [form, setForm] = useState({
     foundingDate: '',
     revenue: '',
@@ -127,18 +130,19 @@ const Filter = () => {
 
   console.log(form);
 
-  // const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
-  const filterUrl = '';
+  const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
+  // const filterUrl = '';
   const onClick = () => {
-    axios.get(filterUrl, form).then(response => {
-      console.log(response.data);
-      // setPosts(response.data.content);
-      setForm({
-        foundingDate: '',
-        revenue: '',
-        employee: '',
-      });
-    });
+    actions.onSearch(form);
+    // axios.get(filterUrl, { data: form }).then(response => {
+    //   console.log(response.data);
+    //   // setPosts(response.data.content);
+    //   setForm({
+    //     foundingDate: '',
+    //     revenue: '',
+    //     employee: '',
+    //   });
+    // });
   };
 
   // useEffect(() => {
