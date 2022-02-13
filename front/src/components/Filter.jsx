@@ -2,8 +2,9 @@ import './Filter.scss';
 import React, { useState, useContext } from 'react';
 import logo from '../img/logo.png';
 import produce from 'immer';
-import axios from 'axios';
+// import axios from 'axios';
 import JobPostContext from '../context/job-post-context';
+// import axios from '../index';
 
 const foundingDates = [
   {
@@ -130,7 +131,7 @@ const Filter = () => {
 
   console.log(form);
 
-  const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
+  // const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
   // const filterUrl = '';
   const onClick = () => {
     actions.onSearch(form);

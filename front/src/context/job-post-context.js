@@ -5,6 +5,7 @@ import axios from '../index';
 // const saraminData = '/saramin.json';
 const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
 // const saraminDataPort = process.env.REACT_APP_SERVER_PORT;
+const saraminDataSearch = process.env.REACT_APP_SERVER_SEARCH;
 console.log(process.env);
 console.log(saraminDataURL);
 
@@ -22,12 +23,18 @@ const JobPostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   // const [posts, setPosts] = useState([]);
 
+  // const saraminDataSearch = '';
   const onSearch = form => {
-    axios.get(saraminDataURL, { data: form }).then(response => {
-      console.log('Clicked', response.data.content);
-      // setPost를 할건데 그 전에 saraminDataURL 거기에 filtering 할 정보를 같이 request를 보낸다
-      setPosts(response.data.content);
-    });
+    axios
+      .get(saraminDataSearch, form)
+      .then(response => {
+        console.log('Clicked', response.data.content);
+        // setPost를 할건데 그 전에 saraminDataURL 거기에 filtering 할 정보를 같이 request를 보낸다
+        setPosts(response.data.content);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {

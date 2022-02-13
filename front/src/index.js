@@ -12,6 +12,6 @@ ReactDOM.render(
 );
 
 export default axios.create({
-  baseURL: 'http://localhost:9090/',
+  baseURL: 'http://localhost:9090',
   timeout: 600000,
 });
