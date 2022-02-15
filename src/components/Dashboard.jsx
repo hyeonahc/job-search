@@ -23,7 +23,7 @@ const DashboardContext = () => {
       Header: '매출액',
       // accessor: 'revenue',
       accessor: r => {
-        console.log(r.revenue);
+        // console.log(r.revenue);
         if (r.revenue) {
           return r.revenue / 100000000 + '억';
         }
