@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import axios from 'axios';
+// import axios from 'axios';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +11,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-export default axios.create({
-  baseURL: 'http://localhost:9090',
-  timeout: 600000,
-});
+// export default axios.create({
+//   baseURL: 'http://localhost:9090',
+//   timeout: 600000,
+// });

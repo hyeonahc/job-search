@@ -21,9 +21,7 @@ const DashboardContext = () => {
     },
     {
       Header: '매출액',
-      // accessor: 'revenue',
       accessor: r => {
-        // console.log(r.revenue);
         if (r.revenue) {
           return r.revenue / 100000000 + '억';
         }
@@ -79,17 +77,8 @@ const DashboardContext = () => {
                 return (
                   <tr {...row.getRowProps()}>
                     {row.cells.map((cell, cellIndex) => {
-                      // console.log(cell, cellIndex);
-                      // if (cellIndex === 3 && cell.value !== undefined) {
-                      //   console.log(cell.value / 100000000 + '억');
-                      //   // cell.values.revenue = '';
-                      // }
                       return (
                         <td {...cell.getCellProps()}>
-                          {/* {cellIndex === 3 && cell.value !== undefined
-                            ? (cell.value = cell.value / 100000000 + '억')
-                            : (cell.value = undefined)} */}
-
                           {cellIndex === 0 ? (
                             <a
                               href={state.posts[rowIndex].url}
@@ -101,10 +90,6 @@ const DashboardContext = () => {
                           ) : (
                             cell.render('Cell')
                           )}
-
-                          {/* {cellIndex === 3 && cell.value !== undefined
-                            ? (cell.value = cell.value / 100000000 + '억')
-                            : (cell.value = undefined)} */}
                         </td>
                       );
                     })}

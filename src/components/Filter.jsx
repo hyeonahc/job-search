@@ -2,9 +2,7 @@ import './Filter.scss';
 import React, { useState, useContext } from 'react';
 import logo from '../img/logo.png';
 import produce from 'immer';
-// import axios from 'axios';
 import JobPostContext from '../context/job-post-context';
-// import axios from '../index';
 
 const foundingDates = [
   {
@@ -121,7 +119,6 @@ const Filter = () => {
   });
 
   const onChange = event => {
-    // console.log(event.target.value);
     setForm(
       produce(form, draft => {
         draft[event.target.name] = event.target.value;
@@ -129,33 +126,9 @@ const Filter = () => {
     );
   };
 
-  console.log(form);
-
-  // const filterUrl = process.env.REACT_APP_SERVER_SEARCH;
-  // const filterUrl = '';
   const onClick = () => {
     actions.onSearch(form);
-    // axios.get(filterUrl, { data: form }).then(response => {
-    //   console.log(response.data);
-    //   // setPosts(response.data.content);
-    //   setForm({
-    //     foundingDate: '',
-    //     revenue: '',
-    //     employee: '',
-    //   });
-    // });
   };
-
-  // useEffect(() => {
-  //   axios
-  //     .get(saraminData)
-  //     .then(({ data: { content } }) => {
-  //       setPosts(content);
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // }, []);
 
   return (
     <div className="filter">
