@@ -17,7 +17,11 @@ const DashboardContext = () => {
     },
     {
       Header: '설립일',
-      accessor: 'foundingDate',
+      accessor: r => {
+        if (r.foundingDate) {
+          return r.foundingDate + '년';
+        }
+      },
     },
     {
       Header: '매출액',
@@ -29,7 +33,11 @@ const DashboardContext = () => {
     },
     {
       Header: '회사사원수',
-      accessor: 'employee',
+      accessor: r => {
+        if (r.employee) {
+          return r.employee + '명';
+        }
+      },
     },
   ];
 

@@ -3,12 +3,8 @@ import axios from 'axios';
 // import axios from '../index';
 import SARAMIN_DATA from '../data/saramin.json';
 
-// const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
-const saraminDataURL = SARAMIN_DATA;
-console.log(saraminDataURL);
-
-// const saraminDataSearch = process.env.REACT_APP_SERVER_SEARCH;
-const saraminDataSearch = '';
+const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
+const saraminDataSearch = process.env.REACT_APP_SERVER_SEARCH;
 
 const JobPostContext = createContext({
   state: {
@@ -34,18 +30,21 @@ const JobPostProvider = ({ children }) => {
       });
   };
 
+  // Back
+  // useEffect(() => {
+  //   axios
+  //     .get(saraminDataURL)
+  //     .then(({ data }) => {
+  //       setPosts(data);
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // }, []);
+
+  // Front
   useEffect(() => {
-    axios
-      .get(saraminDataURL)
-      // .then(response => {
-      //   setPosts(response.data);
-      // })
-      .then(({ data: { content } }) => {
-        setPosts(content);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    setPosts(SARAMIN_DATA.content);
   }, []);
 
   const value = {
