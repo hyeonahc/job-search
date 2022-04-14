@@ -4,7 +4,7 @@ import { useTable, usePagination } from 'react-table';
 import JobPostContext from '../context/job-post-context';
 
 const DashboardContext = () => {
-  const { state } = useContext(JobPostContext);
+  const { jobState } = useContext(JobPostContext);
 
   const Columns = [
     {
@@ -46,7 +46,7 @@ const DashboardContext = () => {
   const tableInstance = useTable(
     {
       columns: columns,
-      data: state.posts,
+      data: jobState.posts,
     },
     usePagination
   );
@@ -61,11 +61,17 @@ const DashboardContext = () => {
     prepareRow,
     canPreviousPage,
     canNextPage,
+    pageOptions,
+    state,
+    gotoPage,
+    pageCount,
   } = tableInstance;
+
+  const { pageIndex } = state;
 
   return (
     <div className="dashboard">
-      {state.posts.length ? (
+      {jobState.posts.length ? (
         <>
           <table {...getTableProps()}>
             <thead>
@@ -89,7 +95,7 @@ const DashboardContext = () => {
                         <td {...cell.getCellProps()}>
                           {cellIndex === 0 ? (
                             <a
-                              href={state.posts[rowIndex].url}
+                              href={jobState.posts[rowIndex].url}
                               target="_blank"
                               rel="noreferrer"
                             >
@@ -107,11 +113,25 @@ const DashboardContext = () => {
             </tbody>
           </table>
           <div>
+            <span>
+              <strong>
+                {pageIndex + 1} of {pageOptions.length}
+              </strong>
+            </span>
+            <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+              {'<<'}
+            </button>
             <button onClick={() => previousPage()} disabled={!canPreviousPage}>
               Previous
             </button>
             <button onClick={() => nextPage()} disabled={!canNextPage}>
               Next
+            </button>
+            <button
+              onClick={() => gotoPage(pageCount - 1)}
+              disabled={!canNextPage}
+            >
+              {'>>'}
             </button>
           </div>
         </>

@@ -7,7 +7,7 @@ const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
 const saraminDataSearch = process.env.REACT_APP_SERVER_SEARCH;
 
 const JobPostContext = createContext({
-  state: {
+  jobState: {
     posts: [],
   },
   actions: {
@@ -48,7 +48,7 @@ const JobPostProvider = ({ children }) => {
   }, []);
 
   const value = {
-    state: { posts },
+    jobState: { posts },
     actions: { setPosts, onSearch },
   };
 
