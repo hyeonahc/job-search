@@ -2,8 +2,6 @@
 
 🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
 
-<br />
-
 ## ✨ Introduction
 
 Job Search is a small API where you can filter three options from the results page of Saramin.
@@ -81,11 +79,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 
    I didn’t follow the common commit message convention which made it hard to figure out what the commit is about.
 
-<br />
-
 ---
-
-<br />
 
 # 🔍 Job Search (한국어)
 
