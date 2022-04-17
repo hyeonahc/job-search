@@ -12,7 +12,7 @@ Job Search is a small API where you can filter three options from the results pa
 
 FYI, [Saramin](https://www.saramin.co.kr/) is one of the biggest Korean employment websites for job listings. You can think of it as Korean Indeed! : )
 
-### **🤔** Problem
+### 🤔 Problem
 
 ![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
 
@@ -22,28 +22,28 @@ Saramin provides job titles, locations and occupations for job search. You are l
 
 My team came up with the idea of adding more search filters to narrow down the job postings and show relevant result data on the table.
 
-### **⚙️** Main Feature
-
-- Crawling: Crawled the job posting data from Saramin and displayed them on the table
-- Filtering: Added three options that filter the job posting data on the table
-
-## **🖌 Demo**
+## 🖌 Demo
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
 👉  [Click here to see Mockup on Behance](https://www.behance.net/gallery/141657723/Search-Jobs)
 
-## **🪄 Tech Stack**
+## ⚙️ Main Feature
 
-### Design [@hyeonahc](https://github.com/hyeonahc)
+- Crawling: Crawled the job posting data from Saramin and displayed them on the table
+- Filtering: Added three options that filter the job posting data on the table
+
+## 🪄 Tech Stack
+
+#### Design [@hyeonahc](https://github.com/hyeonahc)
 
 - Adobe XD
 
-### Front-End [@hyeonahc](https://github.com/hyeonahc)
+#### Front-End [@hyeonahc](https://github.com/hyeonahc)
 
 - React, Context API, React Table, Scss (the style will be applied to the project soon)
 
-### Back-End [@rerun1129](https://github.com/rerun1129)
+#### Back-End [@rerun1129](https://github.com/rerun1129)
 
 - Java, Spring
 
@@ -93,38 +93,38 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 2. 매출액
 3. 회사사원수
 
-## **🤔** Problem
+### 🤔 Problem
 
 ![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
 
 사람인에서 구인정보를 검색할때 내가 선호하는 회사 조건을 필터링해주는 기능이 없어 불편함을 느꼈다.
 
-## 💡Idea
+### 💡Idea
 
 구인정보에서 회사 업력, 매출액, 회사사원수 필터링 옵션을 추가해서 테이블로 정리해주면 어떨까?
 
-## **🖌 데모**
+## 🖌 데모
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
 👉  [Behance에서 Mockup 보러가기](https://www.behance.net/gallery/141657723/Search-Jobs)
 
-## **⚙️** 주요 기능과 로직
+## ⚙️ 주요 기능과 로직
 
 - 크롤링: 사람인에서 IT/개발 직군의 회사 설립일, 매출액, 회사사원수 정보를 불러와 테이블에 보여준다
 - 필터링: 회사 설립일, 매출액, 회사사원수의 세부 검색 기능을 추가한다
 
-## **🪄** 기술 스택
+## 🪄 기술 스택
 
-### Design [@hyeonahc](https://github.com/hyeonahc)
+#### Design [@hyeonahc](https://github.com/hyeonahc)
 
 - Adobe XD
 
-### Front [@hyeonahc](https://github.com/hyeonahc)
+#### Front [@hyeonahc](https://github.com/hyeonahc)
 
 - React, Context API, useTable, Scss (디자인 적용 예정)
 
-### Back [@rerun1129](https://github.com/rerun1129)
+#### Back [@rerun1129](https://github.com/rerun1129)
 
 - Java, Spring
 
