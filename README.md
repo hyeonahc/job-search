@@ -2,7 +2,7 @@
 
 🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
 
-## Introduction
+## ✨ Introduction
 
 Job Search is a small API where you can filter three options from the results page of Saramin.
 
@@ -12,13 +12,13 @@ Job Search is a small API where you can filter three options from the results pa
 
 FYI, [Saramin](https://www.saramin.co.kr/) is one of the biggest Korean employment websites for job listings. You can think of it as Korean Indeed! : )
 
-### 🤔 Problem
+### Problem
 
 ![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
 
 Saramin provides job titles, locations and occupations for job search. You are likely to receive a lot of job postings that don’t match your preferences on the result page.
 
-### 💡 Idea
+### Idea
 
 My team came up with the idea of adding more search filters to narrow down the job postings and show relevant result data on the table.
 
@@ -49,7 +49,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 👉  [Click here to see the back-end repository: job_search_back](https://github.com/rerun1129/job_search_back)
 
-## Project Review
+## 📝 Project Review
 
 ### The most challenging parts
 
@@ -85,7 +85,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 <br />
 
-## 소개
+## ✨ 소개
 
 Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업군 검색결과에서 세가지 필터링 옵션을 추가하여 테이블로 정리해주는 간단한 API입니다.
 
@@ -93,13 +93,13 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 2. 매출액
 3. 회사사원수
 
-### 🤔 Problem
+### Problem
 
 ![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
 
 사람인에서 구인정보를 검색할때 내가 선호하는 회사 조건을 필터링해주는 기능이 없어 불편함을 느꼈다.
 
-### 💡Idea
+### Idea
 
 구인정보에서 회사 업력, 매출액, 회사사원수 필터링 옵션을 추가해서 테이블로 정리해주면 어떨까?
 
@@ -130,7 +130,9 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 👉  [백엔드 리포지토리: job_search_back 보러가기](https://github.com/rerun1129/job_search_back)
 
-## 프로젝트를 하면서 어려웠던 점
+## 📝 프로젝트 리뷰
+
+### 프로젝트를 하면서 어려웠던 점
 
 1. **context API의 사용**
 
@@ -144,7 +146,7 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
    프로젝트를 진행하면서 함께 작업을 했던 백엔드 개발자의 말을 이해하는데 어려움이 있었다. 이를 극복하기 위해 웹개발에 대한 전반적인 흐름을 이해하는 것이 중요하다고 느꼈다. 특히 프론트와 백엔드 사이에서 어떻게 데이터를 받아오는지에 대한 공부를 해 다음 프로젝트에서는 의사소통에 어려움을 줄이는 것을 목표로 삼겠다.
 
-## 프로젝트를 하면서 아쉬웠던 점
+### 프로젝트를 하면서 아쉬웠던 점
 
 1. **.gitignore 적용을 뒤늦게 했다**
 
@@ -154,7 +156,7 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
    깃 커밋 메세지에 대한 prefix, convention에 대한 사전 지식이 없어 기능별로 커밋을 하지 못했고 결과적으로 commit별로 내가 어떤 작업을 했는지 파악하기가 어려워졌다.
 
-## 아쉬웠던점을 보강하기 위해 공부한 내용
+### 아쉬웠던점을 보강하기 위해 공부한 내용
 
 - [[깃] 깃 커밋 메시지 컨벤션 (깃 메세지 작성법)](https://maplecoding.tistory.com/104?category=1268568)
 - [[깃] 커밋 메세지 작성시 필요한 커밋 유형(prefix) 정리](https://maplecoding.tistory.com/101?category=1268568)
