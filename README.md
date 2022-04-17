@@ -1,6 +1,7 @@
-# 🔍 Job Search
+# 🔍 Job Search (English)
 
 🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
+<br />
 
 ## ✨ Introduction
 
@@ -84,6 +85,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 ---
 
 <br />
+# 🔍 Job Search (한국어)
 
 ## ✨ 소개
 
