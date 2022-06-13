@@ -135,9 +135,8 @@ const Filter = () => {
       <h1>
         <img src={logo} alt="" width="200" />
       </h1>
-      <h2>Filter</h2>
       <div>
-        <h3>설립일</h3>
+        <h2>업력</h2>
         <div onChange={onChange}>
           {foundingDates.map(foundingDate => (
             <div key={foundingDate.id}>
@@ -154,7 +153,7 @@ const Filter = () => {
       </div>
 
       <div>
-        <h3>매출액</h3>
+        <h2>매출액</h2>
         <div onChange={onChange}>
           {revenues.map(revenue => (
             <div key={revenue.id}>
@@ -171,7 +170,7 @@ const Filter = () => {
       </div>
 
       <div>
-        <h3>회사사원수</h3>
+        <h2>회사사원수</h2>
         <div onChange={onChange}>
           {employees.map(employee => (
             <div key={employee.id}>

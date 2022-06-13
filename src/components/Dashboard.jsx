@@ -16,7 +16,7 @@ const DashboardContext = () => {
       accessor: 'companyName',
     },
     {
-      Header: '설립일',
+      Header: '업력',
       accessor: r => {
         if (r.foundingDate) {
           return r.foundingDate + '년';
