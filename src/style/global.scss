@@ -1,0 +1,8 @@
+@import '../style/utils.scss';
+
+body,
+button,
+table {
+  font-family: $font;
+  color: $black;
+}
