@@ -47,6 +47,7 @@ const DashboardContext = () => {
     {
       columns: columns,
       data: jobState.posts,
+      initialState: { pageIndex: 0, pageSize: 25 },
     },
     usePagination
   );
