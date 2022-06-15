@@ -135,11 +135,11 @@ const Filter = () => {
       <h1>
         <img src={logo} alt="" width="200" />
       </h1>
-      <div>
+      <div class="option">
         <h2>업력</h2>
-        <div onChange={onChange}>
+        <ul onChange={onChange}>
           {foundingDates.map(foundingDate => (
-            <div key={foundingDate.id}>
+            <li key={foundingDate.id}>
               <input
                 type="radio"
                 id={foundingDate.id}
@@ -147,16 +147,16 @@ const Filter = () => {
                 name={foundingDate.name}
               />
               <label htmlFor={foundingDate.id}>{foundingDate.label}</label>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
-      <div>
+      <div class="option">
         <h2>매출액</h2>
-        <div onChange={onChange}>
+        <ul onChange={onChange}>
           {revenues.map(revenue => (
-            <div key={revenue.id}>
+            <li key={revenue.id}>
               <input
                 type="radio"
                 id={revenue.id}
@@ -164,16 +164,16 @@ const Filter = () => {
                 name={revenue.name}
               />
               <label htmlFor={revenue.id}>{revenue.label}</label>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
-      <div>
+      <div class="option">
         <h2>회사사원수</h2>
-        <div onChange={onChange}>
+        <ul onChange={onChange}>
           {employees.map(employee => (
-            <div key={employee.id}>
+            <li key={employee.id}>
               <input
                 type="radio"
                 id={employee.id}
@@ -181,9 +181,9 @@ const Filter = () => {
                 name={employee.name}
               />
               <label htmlFor={employee.id}>{employee.label}</label>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <button onClick={onClick}>필터 적용하기</button>
