@@ -110,7 +110,7 @@ const employees = [
 ];
 
 const Filter = () => {
-  const { state, actions } = useContext(JobPostContext);
+  const { actions } = useContext(JobPostContext);
 
   const [form, setForm] = useState({
     foundingDate: '',

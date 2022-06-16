@@ -3,7 +3,7 @@ import axios from 'axios';
 // import axios from '../index';
 import SARAMIN_DATA from '../data/saramin.json';
 
-const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
+// const saraminDataURL = process.env.REACT_APP_SERVER_HOST;
 const saraminDataSearch = process.env.REACT_APP_SERVER_SEARCH;
 
 const JobPostContext = createContext({
