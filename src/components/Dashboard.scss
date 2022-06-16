@@ -1,33 +1,56 @@
 @import '../style/global.scss';
 
 .dashboard {
-  width: 75%;
-}
+  width: 83%;
+  height: 100vh;
+  padding: 2em 1.75em 1.75em;
 
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    border-collapse: collapse;
+    width: 100%;
 
-table td,
-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
+    th {
+      padding: 15px 0;
+      text-align: center;
+      background-color: $blue;
+      color: $white;
+    }
 
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+    th,
+    td {
+      border: 1px solid $grey;
+      padding: 10px;
+    }
 
-table tr:hover {
-  background-color: #ddd;
-}
+    tr {
+      &:nth-child(even) {
+        background-color: $lightblue;
+      }
+      &:hover {
+        background-color: $lightbluegrey;
+      }
+    }
+  }
 
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #04aa6d;
-  color: white;
+  .pagination {
+    margin-top: 1em;
+    text-align: right;
+
+    span {
+      color: $blue;
+      font-weight: bold;
+      margin-right: 0.75em;
+    }
+
+    button {
+      color: $blue;
+      font-weight: bold;
+      margin-right: 0.15em;
+      background-color: $white;
+      border: 1px solid $grey;
+      border-radius: 3px;
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
