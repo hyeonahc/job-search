@@ -47,7 +47,7 @@ const DashboardContext = () => {
     {
       columns: columns,
       data: jobState.posts,
-      initialState: { pageIndex: 0, pageSize: 20 },
+      initialState: { pageIndex: 0, pageSize: 17 },
     },
     usePagination
   );
@@ -113,20 +113,18 @@ const DashboardContext = () => {
               })}
             </tbody>
           </table>
-          <div>
+          <div class="pagination">
             <span>
-              <strong>
-                {pageIndex + 1} of {pageOptions.length}
-              </strong>
+              {pageIndex + 1} of {pageOptions.length}
             </span>
             <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
               {'<<'}
             </button>
             <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-              Previous
+              {'<'}
             </button>
             <button onClick={() => nextPage()} disabled={!canNextPage}>
-              Next
+              {'>'}
             </button>
             <button
               onClick={() => gotoPage(pageCount - 1)}
