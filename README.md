@@ -4,18 +4,19 @@
 
 ## ✨ Introduction
 
-Job Search is a small API where you can filter three options from the results page of Saramin.
+Job Search is a small API where you can filter 3 options from the results page of Saramin. The filter options are following:
 
 1. Number of years since the company has been established
 2. Revenue of the company
 3. Number of employees
 
-FYI, [Saramin](https://www.saramin.co.kr/) is one of the biggest Korean employment websites for job listings. You can think of it as Korean Indeed! : )
+FYI, [Saramin](https://www.saramin.co.kr/) is one of the biggest Korean employment websites for job listings. You can think of it as Korean Indeed!
 
 ### Problem
 
-![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png" alt="saramin screenshot" style="width: 70%;"/>
+</p>
 Saramin provides job titles, locations and occupations for job search. You are likely to receive a lot of job postings that don’t match your preferences on the result page.
 
 ### Idea
@@ -26,32 +27,35 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
-👉  [Click here to see Mockup on Behance](https://www.behance.net/gallery/141657723/Search-Jobs)
+🔗 Click [here](https://www.behance.net/gallery/141657723/Search-Jobs) to see the **mockup** on Behance
+🔗 Click [here](https://saramin-job-search.netlify.app/) to see the **live link** on Netlify
 
 ## ⚙️ Main Feature
 
-- Crawling: Crawled the job posting data from Saramin and displayed them on the table
-- Filtering: Added three options that filter the job posting data on the table
+1. Crawling: Crawled the job posting data from Saramin and displayed them on the table
+2. Filtering: Added three options that filter the job posting data on the table
 
 ## 🪄 Tech Stack
 
 #### Design [@hyeonahc](https://github.com/hyeonahc)
 
-- Adobe XD
+: Adobe XD
 
-#### Front-End [@hyeonahc](https://github.com/hyeonahc)
+#### Front-end [@hyeonahc](https://github.com/hyeonahc)
 
-- React, Context API, React Table, Scss (the style will be applied to the project soon)
+: React, Context API, React Table, Scss
 
-#### Back-End [@rerun1129](https://github.com/rerun1129)
+#### Back-end [@rerun1129](https://github.com/rerun1129)
 
-- Java, Spring
+: Java, Spring
 
-👉  [Click here to see the back-end repository: job_search_back](https://github.com/rerun1129/job_search_back)
+🔗 Click here to see the back-end repository: [job_search_back](https://github.com/rerun1129/job_search_back)
 
 ## 📝 Project Review
 
 ### The most challenging parts
+
+<p align="right">Apr 17, 2022</p>
 
 1. **Context API**
 
@@ -79,13 +83,21 @@ My team came up with the idea of adding more search filters to narrow down the j
 
    I didn’t follow the common commit message convention which made it hard to figure out what the commit is about.
 
+### Blog Posts
+
+I studied the challenging parts from this porject and wrote some blog posts. (Written in Korean 🇰🇷)
+
+- [[Git] How to Write Git Commit Message](https://maplecoding.tistory.com/104?category=1268568)
+- [[Git] Common Prefix for Conventional Commits](https://maplecoding.tistory.com/101?category=1268568)
+- [[Git] 4 Things to Avoid When You Use Git](https://maplecoding.tistory.com/99?category=1268568)
+
 ---
 
 # 🔍 Job Search (한국어)
 
 ## ✨ 소개
 
-Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업군 검색결과에서 세가지 필터링 옵션을 추가하여 테이블로 정리해주는 간단한 API입니다.
+Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업군 검색결과에서 세가지 필터링 옵션을 추가하여 테이블로 정리해주는 간단한 API입니다. 3가지 필터링 옵션은 다음과 같습니다:
 
 1. 업력
 2. 매출액
@@ -93,7 +105,9 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 ### Problem
 
-![Saramin](https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png" alt="saramin screenshot" style="width: 70%;"/>
+</p>
 
 사람인에서 구인정보를 검색할때 내가 선호하는 회사 조건을 필터링해주는 기능이 없어 불편함을 느꼈다.
 
@@ -105,32 +119,35 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
-👉  [Behance에서 Mockup 보러가기](https://www.behance.net/gallery/141657723/Search-Jobs)
+🔗 [Behance에서 목업 보러가기](https://www.behance.net/gallery/141657723/Search-Jobs)
+🔗 [Netlify로 배포한 라이브 사이트 보러가기](https://saramin-job-search.netlify.app/)
 
 ## ⚙️ 주요 기능과 로직
 
-- 크롤링: 사람인에서 IT/개발 직군의 회사 설립일, 매출액, 회사사원수 정보를 불러와 테이블에 보여준다
-- 필터링: 회사 설립일, 매출액, 회사사원수의 세부 검색 기능을 추가한다
+1. 크롤링: 사람인에서 IT/개발 직군의 회사 설립일, 매출액, 회사사원수 정보를 불러와 테이블에 보여준다
+2. 필터링: 회사 설립일, 매출액, 회사사원수의 세부 검색 기능을 추가한다
 
 ## 🪄 기술 스택
 
 #### Design [@hyeonahc](https://github.com/hyeonahc)
 
-- Adobe XD
+: Adobe XD
 
 #### Front [@hyeonahc](https://github.com/hyeonahc)
 
-- React, Context API, useTable, Scss (디자인 적용 예정)
+: React, Context API, useTable, Scss
 
 #### Back [@rerun1129](https://github.com/rerun1129)
 
-- Java, Spring
+: Java, Spring
 
-👉  [백엔드 리포지토리: job_search_back 보러가기](https://github.com/rerun1129/job_search_back)
+🔗  [백엔드 리포지토리: job_search_back 보러가기](https://github.com/rerun1129/job_search_back)
 
 ## 📝 프로젝트 리뷰
 
 ### 프로젝트를 하면서 어려웠던 점
+
+<p align="right">Apr 17, 2022</p>
 
 1. **context API의 사용**
 
