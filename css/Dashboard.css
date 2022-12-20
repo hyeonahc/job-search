@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body,
+button,
+table {
+  font-family: "Open Sans", sans-serif;
+  color: #22232b;
+}
+
+a {
+  color: #045de9;
+}
+
+.dashboard {
+  width: 83%;
+  height: 100vh;
+  padding: 2em 1.75em 1.75em;
+}
+
+.dashboard table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dashboard table th {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #045de9;
+  color: #fff;
+}
+
+.dashboard table th,
+.dashboard table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.dashboard table tr:nth-child(even) {
+  background-color: #f3f5f8;
+}
+
+.dashboard table tr:hover {
+  background-color: #e8effa;
+}
+
+.dashboard .pagination {
+  margin-top: 1em;
+  text-align: right;
+}
+
+.dashboard .pagination span {
+  color: #045de9;
+  font-weight: bold;
+  margin-right: 0.75em;
+}
+
+.dashboard .pagination button {
+  color: #045de9;
+  font-weight: bold;
+  margin-right: 0.15em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+}
+/*# sourceMappingURL=Dashboard.css.map */
