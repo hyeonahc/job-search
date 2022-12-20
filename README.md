@@ -28,6 +28,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
 🔗 Click [here](https://www.behance.net/gallery/141657723/Search-Jobs) to see the **mockup** on Behance
+
 🔗 Click [here](https://saramin-job-search.netlify.app/) to see the **live link** on Netlify
 
 ## ⚙️ Main Feature
@@ -55,7 +56,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 ### The most challenging parts
 
-<p align="right">Apr 17, 2022</p>
+_Apr 17, 2022_
 
 1. **Context API**
 
@@ -120,6 +121,7 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
 🔗 [Behance에서 목업 보러가기](https://www.behance.net/gallery/141657723/Search-Jobs)
+
 🔗 [Netlify로 배포한 라이브 사이트 보러가기](https://saramin-job-search.netlify.app/)
 
 ## ⚙️ 주요 기능과 로직
@@ -147,7 +149,7 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 ### 프로젝트를 하면서 어려웠던 점
 
-<p align="right">Apr 17, 2022</p>
+_Apr 17, 2022_
 
 1. **context API의 사용**
 
