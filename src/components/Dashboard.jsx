@@ -1,47 +1,48 @@
-import './Dashboard.scss';
-import React, { useMemo, useContext } from 'react';
-import { useTable, usePagination } from 'react-table';
-import JobPostContext from '../context/job-post-context';
+import './Dashboard.scss'
+import React, { useMemo, useContext } from 'react'
+import { useTable, usePagination } from 'react-table'
+import JobPostContext from '../context/job-post-context'
 
 const DashboardContext = () => {
-  const { jobState } = useContext(JobPostContext);
+  const { jobState } = useContext(JobPostContext)
 
-  const Columns = [
-    {
-      Header: '제목',
-      accessor: 'title',
-    },
-    {
-      Header: '회사이름',
-      accessor: 'companyName',
-    },
-    {
-      Header: '업력',
-      accessor: r => {
-        if (r.foundingDate) {
-          return r.foundingDate + '년';
-        }
+  const columns = useMemo(
+    () => [
+      {
+        Header: '제목',
+        accessor: 'title',
       },
-    },
-    {
-      Header: '매출액',
-      accessor: r => {
-        if (r.revenue) {
-          return r.revenue / 100000000 + '억';
-        }
+      {
+        Header: '회사이름',
+        accessor: 'companyName',
       },
-    },
-    {
-      Header: '회사사원수',
-      accessor: r => {
-        if (r.employee) {
-          return r.employee + '명';
-        }
+      {
+        Header: '업력',
+        accessor: r => {
+          if (r.foundingDate) {
+            return r.foundingDate + '년'
+          }
+        },
       },
-    },
-  ];
-
-  const columns = useMemo(() => Columns, []);
+      {
+        Header: '매출액',
+        accessor: r => {
+          if (r.revenue) {
+            return r.revenue / 100000000 + '억'
+          }
+        },
+      },
+      {
+        Header: '회사사원수',
+        accessor: r => {
+          if (r.employee) {
+            return r.employee + '명'
+          }
+        },
+      },
+    ],
+    []
+  )
 
   const tableInstance = useTable(
     {
@@ -50,7 +51,7 @@ const DashboardContext = () => {
       initialState: { pageIndex: 0, pageSize: 17 },
     },
     usePagination
-  );
+  )
 
   const {
     getTableProps,
@@ -66,12 +67,12 @@ const DashboardContext = () => {
     state,
     gotoPage,
     pageCount,
-  } = tableInstance;
+  } = tableInstance
 
-  const { pageIndex } = state;
+  const { pageIndex } = state
 
   return (
-    <div className="dashboard">
+    <div className='dashboard'>
       {jobState.posts.length ? (
         <>
           <table {...getTableProps()}>
@@ -88,7 +89,7 @@ const DashboardContext = () => {
             </thead>
             <tbody {...getTableBodyProps()}>
               {page.map((row, rowIndex) => {
-                prepareRow(row);
+                prepareRow(row)
                 return (
                   <tr {...row.getRowProps()}>
                     {row.cells.map((cell, cellIndex) => {
@@ -97,39 +98,43 @@ const DashboardContext = () => {
                           {cellIndex === 0 ? (
                             <a
                               href={jobState.posts[rowIndex].url}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
+                              target='_blank'
+                              rel='noreferrer'>
                               {cell.render('Cell')}
                             </a>
                           ) : (
                             cell.render('Cell')
                           )}
                         </td>
-                      );
+                      )
                     })}
                   </tr>
-                );
+                )
               })}
             </tbody>
           </table>
-          <div class="pagination">
+          <div class='pagination'>
             <span>
               {pageIndex + 1} of {pageOptions.length}
             </span>
-            <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+            <button
+              onClick={() => gotoPage(0)}
+              disabled={!canPreviousPage}>
               {'<<'}
             </button>
-            <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+            <button
+              onClick={() => previousPage()}
+              disabled={!canPreviousPage}>
               {'<'}
             </button>
-            <button onClick={() => nextPage()} disabled={!canNextPage}>
+            <button
+              onClick={() => nextPage()}
+              disabled={!canNextPage}>
               {'>'}
             </button>
             <button
               onClick={() => gotoPage(pageCount - 1)}
-              disabled={!canNextPage}
-            >
+              disabled={!canNextPage}>
               {'>>'}
             </button>
           </div>
@@ -138,7 +143,7 @@ const DashboardContext = () => {
         '로딩중'
       )}
     </div>
-  );
-};
+  )
+}
 
-export default DashboardContext;
+export default DashboardContext
