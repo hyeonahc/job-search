@@ -38,7 +38,7 @@
 
 ## ✨ Introduction
 
-Job Search is a small API where you can filter 3 options from the results page of Saramin. The filter options are following:
+Job Search is a small API where you can filter 3 options from the results page of Saramin. The filter options are the following:
 
 1. Number of years since the company has been established
 2. Revenue of the company
@@ -63,7 +63,7 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
-### Mokcup Link
+### Mockup Link
 
 🔗 [Click here to see the mockup on Behance](https://www.behance.net/gallery/141657723/Search-Jobs)
 
@@ -114,13 +114,13 @@ _Apr 17, 2022_
 
 3. **Communication with back-end developers**
 
-   Throughout the project, I found it difficult to understand the back-end developer (Even though it was in my native language, Korean) There were some new terms and a situation I never experienced before. I learned that it’s important to understand the bigger picture, the overall web development process, and to communicate with back-end developers as well as understand how the client-side receives the data from the back-end.
+   Throughout the project, I found it difficult to understand the back-end developer (Even though it was in my native language, Korean) There were some new terms and a situation I never experienced before. I learned that it’s important to understand the bigger picture, overall web development process, and to communicate with back-end developers as well as understand how the client side receives the data from the back end.
 
 ### Areas of improvement
 
-1. **Add .gitignore file in the beginning of the project**
+1. **Add a .gitignore file at the beginning of the project**
 
-   I added .gitignore file later in the project which led to including unnecessary files(cache, node_mdules) in the git history.
+   I added a .gitignore file later in the project which led to including unnecessary files(cache, node_mdules) in the git history.
 
 2. **Make the meaningful commit**
 
@@ -132,7 +132,7 @@ _Apr 17, 2022_
 
 ### Blog Posts
 
-I studied the challenging parts from this porject and wrote some blog posts. (Written in Korean 🇰🇷)
+I studied the challenging parts of this project and wrote some blog posts. (Written in Korean 🇰🇷)
 
 - [[Git] How to Write Git Commit Message](https://maplecoding.tistory.com/104?category=1268568)
 - [[Git] Common Prefix for Conventional Commits](https://maplecoding.tistory.com/101?category=1268568)
