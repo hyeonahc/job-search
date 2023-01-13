@@ -2,6 +2,8 @@
 
 # 🔍 Job Search (English)
 
+<br />
+
 ## 📑 Table of Contents
 
 ### [English](<#🔍-Job-Search-(English)>)
@@ -23,6 +25,8 @@
   - [Areas of improvement](#Areas-of-improvement)
   - [Blog Posts](#Blog-Posts)
 
+<br />
+
 ## 🚀 Quick Start
 
 1. Clone this repo: `git clone https://github.com/hyeonahc/job-search-front.git`
@@ -31,6 +35,8 @@
 4. Start project
    - in your localhost: `yarn start`
    - after build: `yarn build` then `yarn start`
+
+<br />
 
 ## ✨ Introduction
 
@@ -53,6 +59,8 @@ Saramin provides job titles, locations and occupations for job search. You are l
 
 My team came up with the idea of adding more search filters to narrow down the job postings and show relevant result data on the table.
 
+<br />
+
 ## 👀 Demo
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
@@ -65,10 +73,14 @@ My team came up with the idea of adding more search filters to narrow down the j
 
 🔗 [Click here to see the live website link on Netlify](https://saramin-job-search.netlify.app/)
 
+<br />
+
 ## ⚙️ Main Feature
 
 1. Crawling: Crawled the job posting data from Saramin and displayed them on the table
 2. Filtering: Added three options that filter the job posting data on the table
+
+<br />
 
 ## 🪄 Tech Stack
 
@@ -85,6 +97,8 @@ My team came up with the idea of adding more search filters to narrow down the j
 : Java, Spring
 
 🔗 Click here to see the back-end repository: [job_search_back](https://github.com/rerun1129/job_search_back)
+
+<br />
 
 ## 📝 Project Review
 
@@ -126,9 +140,15 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
 - [[Git] Common Prefix for Conventional Commits](https://maplecoding.tistory.com/101?category=1268568)
 - [[Git] 4 Things to Avoid When You Use Git](https://maplecoding.tistory.com/99?category=1268568)
 
+<br />
+
 ---
 
+<br />
+
 # 🔍 Job Search (한국어)
+
+<br />
 
 ## 📑 목차
 
@@ -151,6 +171,8 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
   - [프로젝트를 하면서 아쉬웠던 점](#-프로젝트를-하면서-아쉬웠던-점)
   - [아쉬웠던점을 보강하기 위해 공부한 내용](#-아쉬웠던점을-보강하기-위해-공부한-내용)
 
+<br />
+
 ## 🚀 프로젝트 실행하기
 
 1. 리포 클론하기: `git clone https://github.com/hyeonahc/job-search-front.git`
@@ -159,6 +181,8 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
 4. 프로젝트 실행하기
    - 사용자 로컬호스트: `yarn start`
    - 빌드후 사용: `yarn build` then `yarn start`
+
+<br />
 
 ## ✨ 소개
 
@@ -180,6 +204,8 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 구인정보에서 회사 업력, 매출액, 회사사원수 필터링 옵션을 추가해서 테이블로 정리해주면 어떨까?
 
+<br />
+
 ## 👀 데모
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
@@ -191,6 +217,8 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 ### 라이브 사이트 링크
 
 🔗 [Netlify로 배포한 라이브 사이트 보러가기](https://saramin-job-search.netlify.app/)
+
+<br />
 
 ## ⚙️ 주요 기능과 로직
 
@@ -212,6 +240,8 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 : Java, Spring
 
 🔗  [백엔드 리포지토리: job_search_back 보러가기](https://github.com/rerun1129/job_search_back)
+
+<br />
 
 ## 📝 프로젝트 리뷰
 
