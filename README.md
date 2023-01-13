@@ -1,5 +1,7 @@
 🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
 
+# 🔍 Job Search (English)
+
 ## 📑 Table of Contents
 
 ### [English](<#🔍-Job-Search-(English)>)
@@ -20,8 +22,6 @@
   - [The most challenging parts](#The-most-challenging-parts)
   - [Areas of improvement](#Areas-of-improvement)
   - [Blog Posts](#Blog-Posts)
-
-# 🔍 Job Search (English)
 
 ## 🚀 Quick Start
 
@@ -128,6 +128,8 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
 
 ---
 
+# 🔍 Job Search (한국어)
+
 ## 📑 목차
 
 ### [Korean](<#🔍-Job-Search-(Korean)>)
@@ -148,8 +150,6 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
   - [프로젝트를 하면서 어려웠던 점](#-프로젝트를-하면서-어려웠던-점)
   - [프로젝트를 하면서 아쉬웠던 점](#-프로젝트를-하면서-아쉬웠던-점)
   - [아쉬웠던점을 보강하기 위해 공부한 내용](#-아쉬웠던점을-보강하기-위해-공부한-내용)
-
-# 🔍 Job Search (한국어)
 
 ## 🚀 프로젝트 실행하기
 
