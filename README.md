@@ -2,8 +2,6 @@
 
 # 🔍 Job Search (English)
 
-<br />
-
 ## 📑 Table of Contents
 
 ### [English](<#🔍-Job-Search-(English)>)
@@ -148,8 +146,6 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
 
 # 🔍 Job Search (한국어)
 
-<br />
-
 ## 📑 목차
 
 ### [Korean](<#🔍-Job-Search-(Korean)>)
@@ -224,6 +220,8 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 1. 크롤링: 사람인에서 IT/개발 직군의 회사 설립일, 매출액, 회사사원수 정보를 불러와 테이블에 보여준다
 2. 필터링: 회사 설립일, 매출액, 회사사원수의 세부 검색 기능을 추가한다
+
+<br />
 
 ## 🪄 기술 스택
 
