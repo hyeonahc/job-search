@@ -1,6 +1,57 @@
+🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
+
+## 📑 Table of Contents
+
+### [English](<#🔍-Job-Search-(English)>)
+
+- [🚀 Quick Start](#-Quick-Start)
+- [✨ Introduction](#-Introduction)
+  - [Problem](#Problem)
+  - [Idea](#Idea)
+- [👀 Demo](#-Demo)
+  - [Mokcup Link](#Mokcup-Link)
+  - [Live Website Link](#Live-Website-Link)
+- [⚙️ Main Feature](#-Main-Feature)
+- [🪄 Tech Stack](#-)
+  - [Design](#Design)
+  - [Front-end](#Front-end)
+  - [Back-end](#Back-end)
+- [📝 Project Review](#-Project-Review)
+  - [The most challenging parts](#The-most-challenging-parts)
+  - [Areas of improvement](#Areas-of-improvement)
+  - [Blog Posts](#Blog-Posts)
+
+### [Korean](<#🔍-Job-Search-(Korean)>)
+
+- [🚀 프로젝트 실행하기](#-프로젝트-실행하기)
+- [✨ 소개](#-소개)
+  - [불편했던점](#-불편했던점)
+  - [아이디어](#-아이디어)
+- [👀 데모](#-데모)
+  - [목업 링크](#목업-링크)
+  - [라이브 사이트 링크](#라이브-사이트-링크)
+- [⚙️ 주요 기능과 로직](#-주요-기능과-로직)
+- [🪄 기술 스택](#-기술-스택)
+  - [디자인](#-디자인)
+  - [프론트앤드](#-프론트앤드)
+  - [백앤드](#-백앤드)
+- [📝 프로젝트 리뷰](#-프로젝트-리뷰)
+  - [프로젝트를 하면서 어려웠던 점](#-프로젝트를-하면서-어려웠던-점)
+  - [프로젝트를 하면서 아쉬웠던 점](#-프로젝트를-하면서-아쉬웠던-점)
+  - [아쉬웠던점을 보강하기 위해 공부한 내용](#-아쉬웠던점을-보강하기-위해-공부한-내용)
+
+---
+
 # 🔍 Job Search (English)
 
-🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
+## 🚀 Quick Start
+
+1. Clone this repo: `git clone https://github.com/hyeonahc/job-search-front.git`
+2. Move to the directory: `cd <YOUR_PROJECT_NAME>`.
+3. Install packages: `yarn install`
+4. Start project
+   - in your localhost: `yarn start`
+   - after build: `yarn build` then `yarn start`
 
 ## ✨ Introduction
 
@@ -23,13 +74,17 @@ Saramin provides job titles, locations and occupations for job search. You are l
 
 My team came up with the idea of adding more search filters to narrow down the job postings and show relevant result data on the table.
 
-## 🖌 Demo
+## 👀 Demo
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
-🔗 Click [here](https://www.behance.net/gallery/141657723/Search-Jobs) to see the **mockup** on Behance
+### Mokcup Link
 
-🔗 Click [here](https://saramin-job-search.netlify.app/) to see the **live link** on Netlify
+🔗 [Click here to see the mockup on Behance](https://www.behance.net/gallery/141657723/Search-Jobs)
+
+### Live Website Link
+
+🔗 [Click here to see the live website link on Netlify](https://saramin-job-search.netlify.app/)
 
 ## ⚙️ Main Feature
 
@@ -96,6 +151,15 @@ I studied the challenging parts from this porject and wrote some blog posts. (Wr
 
 # 🔍 Job Search (한국어)
 
+## 🚀 프로젝트 실행하기
+
+1. 리포 클론하기: `git clone https://github.com/hyeonahc/job-search-front.git`
+2. 해당 디렉토리로 이동하기: `cd <YOUR_PROJECT_NAME>`.
+3. 패키지 설치하기: `yarn install`
+4. 프로젝트 실행하기
+   - 사용자 로컬호스트: `yarn start`
+   - 빌드후 사용: `yarn build` then `yarn start`
+
 ## ✨ 소개
 
 Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업군 검색결과에서 세가지 필터링 옵션을 추가하여 테이블로 정리해주는 간단한 API입니다. 3가지 필터링 옵션은 다음과 같습니다:
@@ -104,7 +168,7 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 2. 매출액
 3. 회사사원수
 
-### Problem
+### 불편했던점
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/83247825/163704800-17cc6fe0-9467-470d-b437-1263cef4b2fd.png" alt="saramin screenshot" style="width: 70%;"/>
@@ -112,15 +176,19 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 사람인에서 구인정보를 검색할때 내가 선호하는 회사 조건을 필터링해주는 기능이 없어 불편함을 느꼈다.
 
-### Idea
+### 아이디어
 
 구인정보에서 회사 업력, 매출액, 회사사원수 필터링 옵션을 추가해서 테이블로 정리해주면 어떨까?
 
-## 🖌 데모
+## 👀 데모
 
 ![Job Search](https://user-images.githubusercontent.com/83247825/163704640-e427dc00-af2f-4a16-a2e9-7d812a624411.png)
 
+### 목업 링크
+
 🔗 [Behance에서 목업 보러가기](https://www.behance.net/gallery/141657723/Search-Jobs)
+
+### 라이브 사이트 링크
 
 🔗 [Netlify로 배포한 라이브 사이트 보러가기](https://saramin-job-search.netlify.app/)
 
@@ -131,15 +199,15 @@ Job Search는 [사람인](https://www.saramin.co.kr/zf_user/) IT/개발 직업�
 
 ## 🪄 기술 스택
 
-#### Design [@hyeonahc](https://github.com/hyeonahc)
+#### 디자인 [@hyeonahc](https://github.com/hyeonahc)
 
 : Adobe XD
 
-#### Front [@hyeonahc](https://github.com/hyeonahc)
+#### 프론트앤드 [@hyeonahc](https://github.com/hyeonahc)
 
 : React, Context API, useTable, Scss
 
-#### Back [@rerun1129](https://github.com/rerun1129)
+#### 백앤드 [@rerun1129](https://github.com/rerun1129)
 
 : Java, Spring
 
