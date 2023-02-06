@@ -1,10 +1,8 @@
-🇰🇷  **For Korean user**: 스크롤다운을 하면 한국어로된 프로젝트 설명을 보실 수 있습니다.
+_🇰🇷 For Korean User: 한국어로 된 프로젝트 설명은 [여기](#job-search-한국어)를 클릭해주세요._
 
 # 🔍 Job Search (English)
 
 ## 📑 Table of Contents
-
-### [English](<#🔍-Job-Search-(English)>)
 
 - [🚀 Quick Start](#-Quick-Start)
 - [✨ Introduction](#-Introduction)
@@ -139,9 +137,9 @@ I studied the challenging parts of this project and wrote some blog posts. (Writ
 - [[Git] 4 Things to Avoid When You Use Git](https://maplecoding.tistory.com/99?category=1268568)
 
 <br />
-
----
-
+<br />
+<hr />
+<br />
 <br />
 
 # 🔍 Job Search (한국어)
